@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: url(image/brow.jpg) no-repeat;
+    color: aliceblue;
+}
+
+.survey {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background-color: #7e675680;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(173, 170, 170, 0.1);
+}
+
+.survey h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    /*color*/
+    text-align: center;
+}
+
+.survey .form {
+    margin-top: 30px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box label {
+    color: white;
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .input-box input {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    font-size: 1rem;
+    color: rgb(77, 51, 51);
+    margin-top: 8px;
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.form .consume-opt {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .fav-cho {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .add-ing {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .radio-box {
+    margin-top: 20px;
+}
+
+.form .chos {
+    margin-top: 20px;
+}
+
+.form .addi {
+    margin-top: 20px;
+}
+
+.form .pref {
+    margin-top: 20px;
+}
+
+.form .beli {
+    margin-top: 20px;
+}
+
+.form .bran {
+    margin-top: 20px;
+}
+
+.form .sub {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.radio-box h3 {
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.chos h3 {
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.addi h3 {
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.pref h3 {
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.beli h3 {
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.bran h3 {
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+
+
+
+.form :where(.consume-opt, .opt) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form :where(.fav-cho, .cho) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form :where(.add-ing, .ings) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form :where(.pre-more, .mor) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form :where(.be-eve, .bev) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+.form .opt {
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.form .cho {
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.form .ings {
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.form .mor {
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.form .bev {
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+
+.form :where(.opt input, .opt label) {
+    cursor: pointer;
+}
+
+.form :where(.cho input, .cho label) {
+    cursor: pointer;
+}
+
+.form :where(.ings input, .ings label) {
+    cursor: pointer;
+}
+
+.form :where(.mor input, .mor label) {
+    cursor: pointer;
+}
+
+.form :where(.bev input, .bev label) {
+    cursor: pointer;
+}
+/*radio button*/
+input {
+    accent-color: #7e675680;
+}
+
+/*button*/
+.btn {
+    font-size: 0.9rem;
+    font-weight: 70;
+    padding: 0.5em 1em;
+    color: rgb(77, 51, 51);
+    width: 30%;
+    border-radius: 10px;
+    border-color: #bfbfbf;
+    /*transition: transform 0.3s;*/
+}
+
+
+.btn:hover {
+    /*transform: translateY(-10px);*/
+    color: rgb(160, 134, 100);
+}
+
+/*text area*/
+.bran textarea {
+    width: 50%;
+    height: 40px;
+    padding: 5px;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-color: #bfbfbf;
+    max-height: 40px;
+}
+
+textarea :is(:focus, :valid) {
+    border-width: 2px;
+    padding: 14px;
+    border-color: #7e675680; 
+}
+
+textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+@media screen and (max-width:500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+
+    .form :where(.consume-opt, .opt) {
+        row-gap: 15px;
+    }
+
+    .form :where(.fav-cho, .cho) {
+        row-gap: 15px;
+    }
+
+    .form :where(.add-ing, .ings) {
+        row-gap: 15px;
+    }
+
+    .form :where(.pre-more, .mor) {
+        row-gap: 15px;
+    }
+
+    .form :where(.be-eve, .bev) {
+        row-gap: 15px;
+    }
+
+    .bran textarea {
+        width: 100%;
+    }
+}
