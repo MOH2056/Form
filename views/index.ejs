@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="survey">
+        <h1>Chocolate Lovers Survey</h1>
+        <form action="/submit" method="post" class="form">
+            <div class="column">
+                <div class="input-box">
+                    <label for="firstname">First name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Rachael" required>
+                </div>
+
+                <div class="input-box">
+                    <label for="lastname">Last name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Olaosun" required>
+                </div>
+            </div>
+
+            <div class="radio-box">
+                <h3>How often do you consume chocolate?</h3>
+                <div class="consume-opt">
+                    <div class="opt">
+                        <input type="radio" id="daily" name="consumption" value="daily" required>
+                        <label for="daily">Daily</label>
+                    </div>
+                    <div class="opt">
+                        <input type="radio" id="onceaweek" name="consumption" value="onceaweek">
+                        <label for="onceaweek">Once a week</label>
+                    </div>
+                    <div class="opt">
+                        <input type="radio" id="rarely" name="consumption" value="rarely">
+                        <label for="rarely">Rarely</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chos">
+                <h3>What's your favourite chocolate?</h3>
+                <div class="fav-cho">
+                    <div class="cho">
+                        <input type="radio" id="milkchocolate" name="favourite" value="milkchocolate" required>
+                        <label for="milkchocolate">Milk chocolate</label>
+                    </div>
+
+                    <div class="cho">
+                        <input type="radio" id="darkchocolate" name="favourite" value="darkchocolate">
+                        <label for="darkchocolate">Dark chocolate</label>
+                    </div>
+
+                    <div class="cho">
+                        <input type="radio" id="whitechocolate" name="favourite" value="whitechocolate">
+                        <label for="whitechocolate">White chocolate</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="addi">
+                <h3>Which additional ingredient do you love in your chocolates?</h3>
+                <div class="add-ing">
+                    <div class="ings">
+                        <input type="radio" id="caramel" name="addition" value="caramel" required>
+                        <label for="caramel">Caramel</label>
+                    </div>
+
+                    <div class="ings"> <input type="radio" id="peanutbutter" name="addition" value="peanutbutter">
+                        <label for="peanutbutter">Peanut butter</label>
+                    </div>
+
+                    <div class="ings"><input type="radio" id="marshmellow" name="addition" value="marshmellow">
+                        <label for="marshmellow">Marshmellow</label>
+                    </div>
+
+                    <div class="ings">
+                        <input type="radio" id="cookiepieces" name="addition" value="cookiepieces">
+                        <label for="cookiepieces">Cookie pieces</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pref">
+                <h3>Which one do you prefer more?</h3>
+                <div class="pre-more">
+                    <div class="mor">
+                        <input type="radio" id="bars" name="prefer" value="bars" required>
+                        <label for="bars">Bars</label>
+                    </div>
+
+                    <div class="mor">
+                        <input type="radio" id="candies" name="prefer" value="candies">
+                        <label for="candies">Candies</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="beli">
+                <h3>Do you believe that chocolate has health benefits?</h3>
+                <div class="be-eve">
+                    <div class="bev">
+                        <input type="radio" id="yes" name="benefits" value="yes" required>
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="bev">
+                        <input type="radio" id="no" name="benefits" value="no">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bran">
+                <h3>What's your favourite chocolate brand?</h3>
+                <textarea name="brand" id="brand" placeholder="sneakers" required></textarea>
+            </div>
+
+            <div class="sub">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        const textarea = document.querySelector("textarea");
+        textarea.addEventListener("keyup", e => {
+            let scHeight = e.target.scrollHeight;
+            textarea.style.height = "auto";
+            textarea.style.height = `${scHeight}px`;
+        });
+    </script>
+</body>
+
+</html>
