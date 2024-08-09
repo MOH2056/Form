@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { User, Selection } = require('./Model/SurveySchema');
@@ -11,6 +12,14 @@ app.use(express.static('public'));
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+const corsOpt = {
+    origin: process.env.FRONT_END,
+    methods: 'GET,POST',
+    allowedHeaders: ['content-Type', 'Authorization' ],
+    Credential: true,
+};
+app.use(cors(corsOpt));
 
 const PORT = process.env.PORT || 4000;
 
@@ -37,7 +46,7 @@ app.post("/submit", async (req, res) => {
         const selection = new Selection({ consumption, favourite, addition, prefer, benefits, brand });
         await selection.save();
 
-        res.status(201).send("THANK YOU FOR FILING MY FORM!");
+        res.status(201).send("THANK YOU FOR COMPLETING THE FORM!");
     } catch (err) {
         res.status(500).send("An error occurred while saving data.");
     }
@@ -46,4 +55,3 @@ app.post("/submit", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`SERVER IS RUNNING ON ${PORT}`);
 });
-
