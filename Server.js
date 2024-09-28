@@ -1,6 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { User, Selection } = require('./Model/SurveySchema');
@@ -13,20 +12,9 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const corsOpt = {
-    origin: process.env.FRONT_END,
-    methods: 'GET,POST',
-    allowedHeaders: ['content-Type', 'Authorization' ],
-    Credential: true,
-};
-app.use(cors(corsOpt));
-
 const PORT = process.env.PORT || 4000;
 
-mongoose.connect(process.env.DB_uri, {
-    //useNewUrlParser: true,
-    //useUnifiedTopology: true,
-})
+mongoose.connect(process.env.DB_uri)
 .then(() => console.log('MongoDB connected successfully'))
 .catch((err) => console.log('AN ERROR JUST OCCURED, NOT CONNECTED'));
 
