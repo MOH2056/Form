@@ -18,6 +18,9 @@ mongoose.connect(process.env.DB_uri)
 .then(() => console.log('MongoDB connected successfully'))
 .catch((err) => console.log('AN ERROR JUST OCCURED, NOT CONNECTED'));
 
+app.get("/", (req, res) => {
+    res.status(200).json({message: 'WElCOME TO SURVEY API'})
+});
 app.get("/login", (req, res) => {
     res.render("index");
 });
