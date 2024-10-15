@@ -1,6 +1,6 @@
 const express = require('express')
 const route = express.Router()
-const User = require('../model/SurveySchema')
+const User = require('./SurveySchema')
 
 route.get("/", (req, res) => {
     res.render("index");
