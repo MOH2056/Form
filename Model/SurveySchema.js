@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// A defined Schema for user name
 const userSchema = new mongoose.Schema({
     firstname: {
         type: String,
@@ -10,10 +9,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-});
-
-// A defined schema for options to be selected by users
-const selectionSchema = new mongoose.Schema({
     consumption: {
         type: String,
         required: true
@@ -41,6 +36,4 @@ const selectionSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', userSchema);
-const Selection = mongoose.model('Selection', selectionSchema);
-
-module.exports = { User, Selection };
+module.exports = User;
