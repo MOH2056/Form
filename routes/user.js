@@ -2,7 +2,7 @@ const express = require('express')
 const route = express.Router()
 const User = require('../model/SurveySchema')
 
-route.get("/l", (req, res) => {
+route.get("/", (req, res) => {
     res.render("index");
 });
 
