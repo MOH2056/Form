@@ -23,7 +23,7 @@ route.post("/submit", async (req, res) => {
         return res
         .status(201)
         .send(`THANKS FOR FILLING.....<br>
-            ${consumption}<br>
+            Consumption:${consumption}<br>
             My favourite is ${favourite}<br>
             I prefer ${addition}<br>
             Preference is ${prefer}<br>
